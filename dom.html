@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom in js</title>
+</head>
+<body id="body">
+    <!-- onclick event in get element -->
+    <!-- <h1 id="heading">hello world</h1> -->
+    <!-- <button onclick="ChangeText()">Click me</button> -->
+      <!-- <button id="btn" onclick="Change()">click me</button> -->
+    <!-- <img id="img" src="hotels.jpg" alt="off bulb" width="200"> -->
+    <!-- <img id="img" src="off.png" alt="off bulb" width="200"> -->
+     <input  type="text" value="" id="color">
+     <button id="btn" onclick="Change()">Change bg color</button>
+<script>
+// function ChangeText()
+// {
+    // document.getElementById("btn").innerText = "open"
+    // document.getElementById("btn").innerText = "changed"
+// }
+function Change()
+{
+    document.getElementById("body").style.backgroundColor = document.getElementById("color").value;
+}
+/*{
+    if (document.getElementById("btn").innerText == "Turn on")
+    {
+       document.getElementById("img").src ="on.png"
+       document.getElementById("btn").innerText = "Turn off" 
+    }
+    else
+    {
+       document.getElementById("img").src ="off.png"
+       document.getElementById("btn").innerText = "Turn on"
+    }*/
+ /*document.getElementById("img").src = "hotels.jpg";
+ document.getElementById("img").alt = "hotel img";
+ document.getElementById("img").width = "300";
+ document.getElementById("btn").innerText = "open"
+ // document.getElementById("heading").style.backgroundColor = "pink";
+ // document.getElementById("heading").style.color = "skyblue";
+}*/
+
+
+
+</script>
+</body>
+</html>
