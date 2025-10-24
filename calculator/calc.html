@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class Work</title>
+    <style>
+		table {
+			border-collapse: collapse;
+			min-width: 500px;
+			border:  2px solid black;
+			text-align: center;
+			font-family: 'courier new';
+			background-color: lightseagreen;
+			margin: auto;
+		}
+
+		thead {
+			border:  2px solid black;
+			color: indigo;
+			border-radius: 50px;
+		}
+
+		thead tr th {
+			font-size: 25px;
+			font-weight: bolder;
+			text-align: center;
+			padding: 5px;
+		}
+
+		input[type="button"] {
+			border-radius: 25px;
+			background-color: plum;
+			color: white;
+			border: 2px solid indigo;
+			width: 80%;
+			font-weight: bolder;
+			font-size: 20px;
+			line-height: 20px;
+			margin:  5px;
+			padding: 5px;
+		}
+
+		input[type="text"] {
+			border-radius: 25px;
+			text-align: right;
+			background-color: white;
+			border:  1px solid indigo;
+			width: 90%;
+			color: indigo;
+			font-weight: bolder;
+			font-size: 20px;
+			line-height: 20px;
+			margin:  5px;
+			padding: 10px;
+		}
+	</style>
+</head>
+<body>
+
+    <script>
+        let num1 = '1';
+        let op = "+";
+        let num2 = '2';
+
+        let res = res + num1; //'1'
+        res = res + op; // '1'/
+        res = res + num2; // '1+2'
+
+        res = num1 + op + num2;
+        res = eval(res);
+        //document.write(res);
+    </script>
+
+    <table>
+		<thead>
+			<tr>
+				<th colspan="4">JavaScript Calculator</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr>
+				<!-- clear button -->
+				<td><input type="button" value="AC" onclick="Clear()"/> </td>
+				
+				<!-- display screen -->
+				<td colspan="3"><input type="text" id="output"/></td>
+			</tr>
+			<tr>
+				<td><input type="button" value="+" onclick="Display('+')" /> </td>
+				<td><input type="button" value="1" onclick="Display('1')" /> </td>
+				<td><input type="button" value="2" onclick="Display('2')" /> </td>
+				<td><input type="button" value="3" onclick="Display('3')"/> </td>
+			</tr>
+			<tr>
+				<td><input type="button" value="-" onclick=""/> </td>
+				<td><input type="button" value="4" onclick="Display('4')"/> </td>
+				<td><input type="button" value="5" onclick="Display('5')"/> </td>
+				<td><input type="button" value="6" onclick="Display('6')"/> </td>
+			</tr>
+			<tr>
+				<td><input type="button" value="*" onclick=""/> </td>
+				<td><input type="button" value="7" onclick="Display('7')"/> </td>
+				<td><input type="button" value="8" onclick="Display('8')"/> </td>
+				<td><input type="button" value="9" onclick="Display('9')"/> </td>
+			</tr>
+			<tr>
+				<td><input type="button" value="/"  onclick="Display('/')" /> </td>
+				<td><input type="button" value="." onclick=""/> </td>
+				<td><input type="button" value="0" onclick=""/> </td>
+
+				<!-- Calculate and show result // call eval() -->
+				<td><input type="button" value="=" onclick="Calculate()"/> </td>
+			</tr>
+		</tbody>
+	</table>
+
+	<script>
+		// What to be shown on display // string concatination
+		function Display(val)
+		{
+
+           document.getElementById("output").value += val;
+		}
+
+		// Calculate
+		function Calculate()
+		{
+            let x= eval(document.getElementById("output").value)
+            document.getElementById("output").value = x;
+		}
+
+		// Clear display
+		function Clear()
+		{
+           document.getElementById("output").value="";
+		}
+	</script>
+    
+</body>
+</html>

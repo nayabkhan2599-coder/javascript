@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Specs</title>
+    <script>
+        let phone = {
+            "Samsang Galaxy": {
+                "Model": "OWS234",
+                "OS": "Android_1 turbo 8",
+                "Processor": "Helio G95 Processor",
+                "Battery": "5000mAh Battery with 18W Fast Charging",
+                "image": "images.jpg"
+            },
+            "Infinix Zero X Pro": {
+                "Model": "OIS2184",
+                "OS": "Android 11",
+                "Processor": "Helio G98 Processor",
+                "Battery": "4500mAh with 45W fast charging",
+                "image": "mobile.jpg"
+            },
+            "Vivo Y21 Mobile": {
+                "Model": "OIS2584",
+                "OS": "Android 11",
+                "Processor": "Helio G99 Processor",
+                "Battery": "5000mAh",
+                "image": "vivo.jpg"
+            }
+        }
+    </script>
+    <script>
+        function Change()
+        {
+            let choice= document.getElementById("select-box").value;
+
+            console.log(phone[choice]);
+            document.getElementById("phoneImage").src = phone[choice].image;
+            document.getElementById("name").innerText = choice;
+            document.getElementById("model").innerText = phone[choice].Model;
+            document.getElementById("os").innerText = phone[choice].Os;
+            document.getElementById("processor").innerText = phone[choice].Processor;
+            document.getElementById("battery").innerText = phone[choice].Battery;
+        }
+    </script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .phone-card {
+            background-color: #fff;
+            width: 300px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .phone-card img {
+            width: 150px;
+            height: auto;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+
+        .spec {
+            margin: 8px 0;
+            font-size: 16px;
+        }
+
+        .spec strong {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <select name="" id="select-box">
+        <option>Samsang Galaxy</option>
+        <option>Infinix Zero X Pro</option>
+        <option>Vivo Y21 Mobile</option>
+    </select>
+    <button onclick="Change()">view phoneImage</button>
+    <div class="phone-card">
+        <img id="phoneImage" src="images.jpg" alt="Phone Image">
+        <div class="spec"><strong>Name:</strong> <span id="name">-</span></div>
+        <div class="spec"><strong>Model:</strong> <span id="model">-</span></div>
+        <div class="spec"><strong>Operating System:</strong> <span id="os">-</span></div>
+        <div class="spec"><strong>Processor:</strong> <span id="processor">-</span></div>
+        <div class="spec"><strong>Battery:</strong> <span id="battery">-</span></div>
+    </div>
+
+</body>
+
+</html>
