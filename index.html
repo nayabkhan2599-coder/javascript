@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="list">
+        <li> Item # 1</li>
+    </ul>
+    <div id="one">
+        <h1>H1</h1>
+        <p class="para">paragraph</p>
+    </div>
+    
+    <script>
+        let newitem = document.createElement("li");
+        newitem.innerText = "Item # 2";
+
+        document.getElementById("list").appendChild(newitem); // for adding item # 2;
+        document.getElementById("list").removeChild(newitem);//  for removing item # 2;
+    </script>
+    <script>
+        document.querySelector("one h1").innerText="okay";
+        document.getElementsByClassName("para")[0].innerText="this is a paragraph";
+    </script>
+
+</body>
+
+</html>
